@@ -27,7 +27,7 @@ class LoggerConfig {
     cfg.appenders = new List.from(appenders);
     return cfg;
   }
-  
+
   ///
   bool debugEnabled;
   ///
@@ -36,14 +36,14 @@ class LoggerConfig {
   bool infoEnabled;
   ///
   bool warnEnabled;
-  
+
   /// * **c** Output the level (category) of the logging event
   /// * **d** Output the date when the log message was recorded
   /// * **m** Output the actual logging message
   /// * **n** Output the name of the logger that recorded the log
   /// * **x** Output the context of the logger
   String logFormat;
-  
+
   ///
   List<Appender> appenders;
 }

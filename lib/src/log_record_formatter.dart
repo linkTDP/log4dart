@@ -7,7 +7,7 @@ part of log4dart;
 
 /**
  * A log record formatter for the given log format
- */ 
+ */
 class LogRecordFormatter {
   LogRecordFormatter(String _logFormat)
     : recordContext = false,
@@ -85,7 +85,7 @@ class LogRecordFormatter {
      _formatters.add((LogRecord record) => text);
   }
 
-  String _peek([int distance = 0]) => _formatReader.peek(distance);
+  String _peek({int distance: 0}) => _formatReader.peek(distance);
 
   _advance() => _formatReader.advance();
 
@@ -93,7 +93,7 @@ class LogRecordFormatter {
 
   /**
    * Returns the formatted version of a [LogRecord]
-   */ 
+   */
   String format(LogRecord record) {
     var res = "";
     _formatters.forEach((_RecordFormatter formatter) => res = res.concat(formatter(record)));
@@ -107,13 +107,13 @@ class LogRecordFormatter {
 }
 
 /**
- * Signature for the log record formatter 
- */ 
+ * Signature for the log record formatter
+ */
 typedef String _RecordFormatter(LogRecord record);
 
 /**
  * Reads format strings one token at a time
- */ 
+ */
 class _LogFormatReader {
   factory _LogFormatReader(String formatString) {
     Expect.isFalse(formatString == null && formatString.isEmpty, "log format cannot be null or empty");

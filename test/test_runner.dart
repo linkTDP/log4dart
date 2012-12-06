@@ -22,7 +22,7 @@ main() {
   LoggerFactory.config["SimpleLogTest"].infoEnabled = true;
 
   // Use a file appedender for a specifc logger
-  LoggerFactory.config["ContextLogTest"].appenders = [new FileAppender("/tmp/log.txt")];
+  LoggerFactory.config["ContextLogTest"].appenders = [new FileAppender("C:/tmp/log.txt")];
 
   // run tests
   new SimpleLogTest();

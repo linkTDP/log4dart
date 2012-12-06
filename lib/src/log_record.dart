@@ -7,7 +7,7 @@ part of log4dart;
 
 /**
  * A logging event
- */ 
+ */
 class LogRecord {
   LogRecord(this.message, this.logLevel, this.loggerName, this.context)
     : date = new Date.now();

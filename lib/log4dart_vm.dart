@@ -4,10 +4,10 @@
 // specified in the LICENSE file
 
 /**
- * Logger that depends on VM functionality (file access). 
- * 
+ * Logger that depends on VM functionality (file access).
+ *
  * Use [log4dart.dart] if you need client access
- */ 
+ */
 library log4dart_file;
 
 import "dart:io";
