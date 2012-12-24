@@ -6,4 +6,4 @@ description: >
   diagnostic context and configurable formatting. 
 version: 1.2.0   
 dependencies:
-  sprintf: ">=1.0.1"
+  sprintf: any
